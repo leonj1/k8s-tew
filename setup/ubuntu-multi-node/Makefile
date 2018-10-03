@@ -4,6 +4,8 @@ VAGRANT_VAGRANTFILE=../../Vagrantfile
 OS=ubuntu
 IP_PREFIX=192.168.120
 MULTI_NODE=true
+CONTROLLERS=1
+WORKERS=3
 
 run: destroy up deploy
 
