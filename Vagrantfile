@@ -40,17 +40,17 @@ $single_node_cpus = 4
 # Controllers
 ############################################################
 
-$controllers_count = 3
-$controllers_ram = 4096
-$controllers_cpus = 4
+$controllers_count = 1
+$controllers_ram = 2048
+$controllers_cpus = 1
 
 ############################################################
 # Workers
 ############################################################
 
 $workers_count = 2
-$workers_ram = 4096
-$workers_cpus = 4
+$workers_ram = 2048
+$workers_cpus = 1
 
 ############################################################
 # Environment variables
@@ -175,7 +175,7 @@ Vagrant.configure("2") do |config|
     config.vm.box_check_update = false
 
     config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        #vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
         vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
     end
